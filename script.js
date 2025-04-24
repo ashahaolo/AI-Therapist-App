@@ -20,6 +20,29 @@ function setMood(mood) {
   chatbox.innerHTML += `<p><strong>Therapist:</strong> ${message}</p>`;
   chatbox.scrollTop = chatbox.scrollHeight;
 }
+function playGuidedAudio(mood) {
+  const audio = document.getElementById("guidedAudio");
+
+  let audioSource = "";
+  switch (mood) {
+    case "happy":
+      audioSource = "audio/happy.mp3";
+      break;
+    case "sad":
+      audioSource = "audio/sad.mp3";
+      break;
+    case "stressed":
+      audioSource = "audio/stressed.mp3";
+      break;
+    case "angry":
+      audioSource = "audio/angry.mp3";
+      break;
+  }
+
+  audio.src = audioSource;
+  audio.style.display = "block";
+  audio.play();
+}
 
 document.getElementById("sendBtn").addEventListener("click", () => {
   const input = document.getElementById("userInput");
