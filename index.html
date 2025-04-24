@@ -1,35 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Therapist</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-  <title>AI Therapist</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    #chatbox { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; }
-    #moods button { margin-right: 10px; }
-    #userInput { width: 80%; padding: 10px; }
-    #sendBtn { padding: 10px; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h2>Talk to your AI therapist, Boss:</h2>
+
   <div id="moods">
     😊 <button onclick="setMood('happy')">Happy</button>
     😢 <button onclick="setMood('sad')">Sad</button>
     😟 <button onclick="setMood('stressed')">Stressed</button>
     😠 <button onclick="setMood('angry')">Angry</button>
   </div>
+
   <div id="chatbox"></div>
-  <input type="text" id="userInput" placeholder="Type here...">
+
+  <input type="text" id="userInput" placeholder="Type here..." />
   <button id="sendBtn">Send</button>
 
   <script src="script.js"></script>
